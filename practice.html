@@ -8,12 +8,19 @@
             display: inline-block;
             width: 130px;
         }
-
         #container {
             width:600px;
             margin:10px auto;
         }
-    </style>
+        body > h1:hover {
+            margin: 0.67em 500px;
+            background: linear-gradient(to right bottom, blue, aqua 50%, green);
+            transform: rotate(180deg);
+        }
+        #container fieldset:first-of-type {
+            background: radial-gradient(circle, white, yellow, red);
+        }
+        </style>
 </head>
 <body>
     <h1 style="text-align: center;">회원 가입을 환영합니다.</h1>
