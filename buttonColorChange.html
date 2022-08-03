@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>자바스크립트 이벤트</title>
+	<link rel="stylesheet" href="css/function.css">
+</head>
+<body>
+	<button id="change">글자색 바꾸기</button>	
+	<p id="happy">글자색을 바꿔주세요</p>
+	<script>
+    var changeBttn = document.querySelector("#change");
+    changeBttn.onclick = changeColor;
+    
+		function changeColor() {
+      if (document.querySelector("p").style.color == "black"){
+        document.querySelector("p").style.color = "white";
+       }
+      else{
+        document.querySelector("p").style.color = "black";
+      }
+    }
+	</script>
+</body>
+</html>  
