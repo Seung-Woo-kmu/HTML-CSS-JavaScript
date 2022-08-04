@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for="subject">텍스트 입력: </label>
+        <input type="text" id="subject" autofocus>
+        <button id ="happy" onclick="return false;">추가</button>
+    </form>
+
+    <ul id="itemList"></div>
+    <script>
+        var click = document.getElementById("happy");
+        click.addEventListener("click", add);
+        function add(){
+          var a = document.createElement("li");
+          var c = document.getElementById("subject");
+          var b = document.createTextNode(c.value);
+          a.appendChild(b);
+          var itemList = document.querySelector("#itemList");
+          itemList.appendChild(a);
+          c.value = "";
+          go = document.querySelectorAll("li");
+          for (let i = 0; i < go.length; i++){
+          go[i].addEventListener("click", function(){
+            if (this.parentNode)
+            this.parentNode.removeChild(this);
+                });
+            }
+        }
+    </script>
+</body>
+</html>
