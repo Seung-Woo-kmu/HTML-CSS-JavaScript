@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for= "user">텍스트 입력: </label>
+    <input type ="text" id="user" autofocus onkeyup="printText()">
+    <div id="create"></div>
+    <script>
+        function printText() {
+            write = document.getElementById('user').value;
+            document.getElementById('create').innerText = write;
+        }
+    </script>
+</body>
+</html>
